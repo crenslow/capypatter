@@ -1,0 +1,17 @@
+body {
+    /*background-image: url("capybara-square-1.jpg") ;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: top;
+    background-color: aqua;
+}
+#hand{
+    height: 1000px;
+    width: 1000px;
+}
+#hand:active{
+
+
+    box-shadow: 0 5px #666;
+    transform: translateY(40px);
+}

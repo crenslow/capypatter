@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <title>Capy Patter</title>
+  <body>
+    <h2>Capy Patter 2000</h2>
+    <h3 id="score">Score:</h3>
+    <h3 id="scorenum">0</h3>
+    <div id="clicker" onclick="score()">
+      <img id="hand" src="hand.png" alt="" />
+    </div>
+    <script>
+      document.body.style.backgroundImage = "url('capy.jpg')";
+      var num = document.getElementById("scorenum");
+      
+      function score() {
+        num.innerText++;
+        console.log(num.innerText);
+        if (num.innerText == 20) {
+          
+          document.body.style.backgroundImage = "url('capy2.jpg')";
+        }
+        if (num.innerText == 50){
+            document.body.style.backgroundImage = "url('capy4.jpg')";
+        }
+        
+      }
+    </script>
+  </body>
+</html>
