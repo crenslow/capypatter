@@ -7,28 +7,45 @@
   </head>
   <title>Capy Patter</title>
   <body>
+
     <h2>Capy Patter 2000</h2>
+    <p>(click hand to pat, press play for ok i pull up)</p>
     <h3 id="score">Score:</h3>
     <h3 id="scorenum">0</h3>
     <audio src="pull.mp3" controls autoplay></audio>
-
+    <div>
+       <button id="next">Next Image</button>
+    </div>
+    <h1 id="win">YOU WIN</h1>
     <div id="clicker" onclick="score()">
       <img id="hand" src="hand.png" alt="" />
     </div>
     <script>
-      document.body.style.backgroundImage = "url('capy.jpg')";
+      document.body.style.backgroundImage = "url('capy1.jpg')";
       var num = document.getElementById("scorenum");
-      
+      var count = 1;
+      win.hidden = true;
       function score() {
         num.innerText++;
         console.log(num.innerText);
-        if (num.innerText == 20) {
-          
-          document.body.style.backgroundImage = "url('capy2.jpg')";
+        if (num.innerText == 500) {
+          var win = document.getElementById("win");
+          win.hidden = false;
         }
-        if (num.innerText == 50){
-            document.body.style.backgroundImage = "url('capy4.jpg')";
+        if (num.innerText == 50) {
+          document.body.style.backgroundImage = "url('capy3.jpg')";
         }
+      }
+      document.getElementById("next").onclick = function imageNext(){
+        count++;
+        var capy = "capy"+count+".jpg"; 
+        document.body.style.backgroundImage = "url("+capy+")";
+        console.log(capy);
+        if (count > 5){
+          document.body.style.backgroundImage = "url('capy1.jpg')";
+          count = 1;
+        }
+        
         
       }
     </script>

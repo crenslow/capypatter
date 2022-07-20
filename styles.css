@@ -11,7 +11,16 @@ body {
 }
 #hand:active{
 
-
     box-shadow: 0 5px #666;
     transform: translateY(40px);
+}
+#hand:hover{
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+h1{
+    margin-left: 50%;
+    color: yellow;
+    
+    
 }
